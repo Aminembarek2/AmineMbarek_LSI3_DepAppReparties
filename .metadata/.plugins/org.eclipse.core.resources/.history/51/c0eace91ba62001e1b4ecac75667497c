@@ -1,0 +1,23 @@
+package ClientPackage;
+
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class Client {
+
+	public static void main(String[] args) {
+		// premiere etape :
+		Socket socket = new Socket("localhost", 1234); S.o.p("je suis connecté");
+		System.out.println("Je suis un client pas encore connecte...");
+		
+		//La deuxieme etape :
+		Socket s = ss.accept();
+
+		System.out.println("un client est connecte");
+		
+		//La derniere etape : Fermer socket
+		s.close();
+
+	}
+
+}

@@ -1,0 +1,20 @@
+package ServerPackage;
+import java.net.*;
+
+public class Server {
+
+	public static void main(String[] args) {
+		// premiere etape :
+		ServerSocket ss = new ServerSocket(12340);
+		System.out.println("Je suis un serveur en attende la connexion d'un client");
+		
+		//La deuxieme etape :
+		Socket s = ss.accept();
+
+		System.out.println("un client est connecte");
+		
+		//La derniere etape : Fermer socket
+		s.close();
+	}
+
+}

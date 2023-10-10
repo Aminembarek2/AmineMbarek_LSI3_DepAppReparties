@@ -1,0 +1,24 @@
+package ServerPackage;
+import java.io.IOException;
+import java.net.*;
+
+public class Server {
+
+	public static void main(String[] args) throws IOException {
+		// premiere etape :
+			ServerSocket ss = new ServerSocket(1234);
+			System.out.println("Je suis un serveur en attende la connexion d'un client");
+		
+		//La deuxieme etape :
+			Socket s = ss.accept();
+			System.out.println("un client est connecte");
+		
+		//La derniere etape : Fermer socket
+			s.close();
+		
+		// La console affiche :
+			//Je suis un serveur en attende la connexion d'un client
+		// Donc le server est UP et attent d'une request.
+	}
+
+}

@@ -1,0 +1,26 @@
+package ClientPackage;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class Client {
+
+	public static void main(String[] args) throws UnknownHostException, IOException {
+		// premiere etape :
+		System.out.println("Je suis un client pas encore connecte...");
+		
+		// J'ai teste le server avec localhost et l'adresse IP
+		
+		// Socket s = new Socket("localhost", 1234);
+		Socket s = new Socket("127.0.0.1", 1234);
+		
+		System.out.println("Je suis connecté");
+		
+		//La derniere etape : Fermer socket
+		s.close();
+
+	}
+
+}
